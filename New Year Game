@@ -1,0 +1,33 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+import java.util.Scanner;
+
+public class NewYearGame {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int testCases = input.nextInt();
+        while (testCases > 0) {
+            testCases--;
+            int n = input.nextInt();
+            boolean[] inputLine = new boolean[3];
+            for (int a = 0; a < n; a++) {
+                int temp = input.nextInt();
+                inputLine[temp%3] = !inputLine[temp%3];
+            }
+            if((!inputLine[1]) && (!inputLine[2])){
+                System.out.println("Koca");
+            }
+            else{
+                System.out.println("Balsa");
+            }
+            
+            
+            
+        }
+    }
+}
